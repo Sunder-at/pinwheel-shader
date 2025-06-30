@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhoexwgqmdmjp"]
+
+[ext_resource type="Shader" path="res://pinwheel.gdshader" id="1_2ch10"]
+[ext_resource type="Texture2D" uid="uid://ck3i3x2nuakh6" path="res://purpur.png" id="2_ckk72"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhy4m"]
+shader = ExtResource("1_2ch10")
+shader_parameter/zoom = 1.0
+shader_parameter/lod = 4
+shader_parameter/text = ExtResource("2_ckk72")
+
+[sub_resource type="QuadMesh" id="QuadMesh_culnl"]
+size = Vector2(1000, 1000)
+
+[node name="Main" type="MeshInstance2D"]
+material = SubResource("ShaderMaterial_fhy4m")
+position = Vector2(494.363, 540.091)
+mesh = SubResource("QuadMesh_culnl")
